@@ -106,6 +106,7 @@ class Plotting:
         plt.savefig("barplot_year.jpg", dpi=300)
         plt.show()
 
+    #in colab display different barplot 
     def monthly_revenue_plot(self,df):
         by_month = df.groupby('month')['revenue'].sum().reset_index() # grouping the data by month and i get the revenue for each month.
         sns.barplot(data=by_month,x='month', y='revenue')
